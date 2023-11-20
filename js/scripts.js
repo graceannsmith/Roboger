@@ -12,7 +12,7 @@ function createRobotTalk(nums) {
     if (currentNumber.includes('1') && currentNumber.includes('2')) {
       robotTalk = "Boop!";
     } else if (currentNumber.includes('3') && currentNumber.includes('1')) {
-      robotTalk = "Won't you be my nighbor?";
+      robotTalk = "Won't you be my neighbor?";
     } else if (currentNumber.includes('2') && currentNumber.includes('3')) {
       robotTalk = "Won't you be my neighbor??";
     } else if (currentNumber.includes('1')) {
@@ -20,21 +20,26 @@ function createRobotTalk(nums) {
     } else if (currentNumber.includes('2')) {
       robotTalk = "Boop!";
     } else if (currentNumber.includes('3')) {
-      robotTalk = "Won't you be my neighbor??";
+      robotTalk = "Won't you be my neighbor?";
     }
     else {
       robotTalk = i;
     }
     robotArray.push(robotTalk);
   }
-  return robotArray;
-
-
+  return robotArray.join(' ');
 }
-
-
-let test1 = createRobotTalk(23);
-console.log(test1);
+window.onload = function () {
+  let form = document.querySelector("form");
+  form.onsubmit = function (event) {
+    let selected = document.querySelector("#numberTalk").value;
+    createRobotTalk(selected);
+    let resultText = createRobotTalk(selected);
+    form.reset();
+    document.querySelector(".hiddenText").innerText = resultText;
+    event.preventDefault();
+  };
+};
 
 
 
