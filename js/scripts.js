@@ -2,27 +2,40 @@ function createRobotTalk(nums) {
   let stringedNumberArray = [];
   let robotArray = [];
 
-  for (let i = 0; i <= nums; i++).{
+  for (let i = 0; i <= nums; i++) {
     stringedNumberArray.push(i.toString());
   }
+  for (let i = 0; i < stringedNumberArray.length; i++) {
+    let currentNumber = stringedNumberArray[i];
+    let robotTalk = "";
+
+    if (currentNumber.includes('1') && currentNumber.includes('2')) {
+      robotTalk = "Boop!";
+    } else if (currentNumber.includes('3') && currentNumber.includes('1')) {
+      robotTalk = "Won't you be my nighbor?";
+    } else if (currentNumber.includes('2') && currentNumber.includes('3')) {
+      robotTalk = "Won't you be my neighbor??";
+    } else if (currentNumber.includes('1')) {
+      robotTalk = "Beep!";
+    } else if (currentNumber.includes('2')) {
+      robotTalk = "Boop!";
+    } else if (currentNumber.includes('3')) {
+      robotTalk = "Won't you be my neighbor??";
+    }
+    else {
+      robotTalk = i;
+    }
+    robotArray.push(robotTalk);
+  }
+  return robotArray;
+
+
 }
 
-let test1 = createRobotTalk();
+
+let test1 = createRobotTalk(23);
 console.log(test1);
 
 
 
 
-
-
-
-
-// if (numberArray[i] === '1') {
-//   numberArray[i] = 'Beep!'
-// } else if (numberArray[i] === '2') {
-//   numberArray[i] = "Boop!"
-// } else if (number[i] === '3') {
-//   numberArray[i] === "Won't you be my neighbor?"
-// }
-// robotArray.push(numberArray[i]);
-// }
