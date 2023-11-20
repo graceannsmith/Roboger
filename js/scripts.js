@@ -32,18 +32,27 @@ function createRobotTalk(nums) {
   let numberArray = Array.from(stringNums);
   console.log(numberArray);
   for (let i = 0; i < numberArray.length; i++) {
-    if (numberArray[i] === '1') {
-      numberArray[i] = 'Beep!'
-    } else if (numberArray[i] === '2') {
-      numberArray[i] = "Boop!"
-    } else if (number[i] === '3') {
-      numberArray[i] === "Won't you be my neighbor?"
-    }
-    robotArray.push(numberArray[i]);
+
+
+    return robotArray;
   }
 
-  return robotArray;
-}
+  let test1 = createRobotTalk(1234562232);
+  console.log(test1);
 
-let test1 = createRobotTalk(1234562232);
-console.log(test1);
+
+
+
+
+
+
+
+// if (numberArray[i] === '1') {
+//   numberArray[i] = 'Beep!'
+// } else if (numberArray[i] === '2') {
+//   numberArray[i] = "Boop!"
+// } else if (number[i] === '3') {
+//   numberArray[i] === "Won't you be my neighbor?"
+// }
+// robotArray.push(numberArray[i]);
+// }

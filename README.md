@@ -18,11 +18,15 @@ Test: "It should create a string of numbers from the user's inputted number"
 Code: createRobotTalk(0);
 Expected Output: '0'
 
-Test: "It should create an array out of string of number(s) from the user's inputted number"
+Test: It should return an array at the end of the function
 Code: createRobotTalk(0);
-Expected Output:['0']
+Expected:['0']
 
-Test: "it should successfully iterate over every number"
+Test: It should iterate over the individual numbers looking for matches And push into array
+Code: createRobotTalk(123);
+Expected Output:["Boop!", "Beep!","Won't you be my neighbor??" ]
+
+Test: it should
 Code:
 Expected:
 
