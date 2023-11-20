@@ -1,14 +1,12 @@
 function createRobotTalk(nums) {
   let stringedNumberArray = [];
   let robotArray = [];
-
   for (let i = 0; i <= nums; i++) {
     stringedNumberArray.push(i.toString());
   }
   for (let i = 0; i < stringedNumberArray.length; i++) {
     let currentNumber = stringedNumberArray[i];
     let robotTalk = "";
-
     if (currentNumber.includes('1') && currentNumber.includes('2')) {
       robotTalk = "Boop!";
     } else if (currentNumber.includes('3') && currentNumber.includes('1')) {
@@ -40,7 +38,3 @@ window.onload = function () {
     event.preventDefault();
   };
 };
-
-
-
-
