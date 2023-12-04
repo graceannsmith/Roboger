@@ -34,25 +34,37 @@ Test: "It should create a string of numbers from the user's inputted number"
 Code: createRobotTalk(0);
 Expected Output: '0'
 
-Test:it should use a for loop to iterate over stringed numbers and push each 'digit' into an array
+Test:it should use a for loop to iterate over each stringed number
+Code:createRobotTalk(3);
+Expected:'0','1','2','3'
+
+Test: It should push all the new stringified elements into an array
 Code:createRobotTalk(3);
 Expected:['0','1','2','3']
 
-Test: It should return an array at the end of the function
-Code: createRobotTalk(0);
-Expected:['0']
+Test: It should use a branching statement to change any number containing a '3' in the to string "Won't you be my neighbor??" 
+Code: createRobotTalk(3);
+Expected:['0','1','2','Won't you be my neighbor??']
 
-Test: It should iterate over the individual numbers looking for matches And push into array
-Code: createRobotTalk(123);
-Expected Output:["Boop!", "Beep!","Won't you be my neighbor??" ]
+Test: The branching statement should also change any number containing a '2' in the to string "Boop!" 
+Code: createRobotTalk(3);
+Expected:['0','1','Boop!','Won't you be my neighbor??']
 
-Test: it should account for numbers that contain both target digits
-Code: createRobotTalk(15);
-Expected: [0,'Beep!','Boop!',"Won't you be my neighbor??",4, 5,6,7,8,9,'Beep!','Beep!','Boop!',"Won't you be my neighbor?",'Beep!','Beep!']
+Test: The branching statement statement should also change any number containing a '1' in the to string "Beep!" 
+Code: createRobotTalk(3);
+Expected:['0','Beep!','Boop!','Won't you be my neighbor??']
+
+Test: The branching statement should leave any stringified number that does not contain a '1', '2' or '3' alone and push that original string value into the new array 
+Code: createRobotTalk(4);
+Expected:['0','1','2','Won't you be my neighbor??','4']
+
+Test: It should return an array at the end of the function that accurately reflects the branching statement.
+Code: createRobotTalk(13);
+Expected:['0', 'Beep!', 'Boop!', 'Won't you be my neighbor?', '4', '5', '6', '7', '8', '9', 'Beep!', 'Beep!', 'Boop!', 'Won't you be my neighbor?']
 
 Test: "It should return an array that is joined without commas out of string of number(s) from the user's inputted number"
-Code: createRobotTalk(0);
-Expected Output:0
+Code: createRobotTalk(13);
+Expected Output: 0 Beep! Boop! Won't you be my neighbor? 4 5 6 7 8 9 Beep! Beep! Boop! Won't you be my neighbor?
 
 ## Known Bugs
 
