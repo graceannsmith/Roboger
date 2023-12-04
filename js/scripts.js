@@ -7,26 +7,20 @@ function createRobotTalk(nums) {
   for (let i = 0; i < stringedNumberArray.length; i++) {
     let currentNumber = stringedNumberArray[i];
     let robotTalk = "";
-    if (currentNumber.includes('1') && currentNumber.includes('2')) {
-      robotTalk = "Boop!";
-    } else if (currentNumber.includes('3') && currentNumber.includes('1')) {
+    if (currentNumber.includes('3')) {
       robotTalk = "Won't you be my neighbor?";
-    } else if (currentNumber.includes('2') && currentNumber.includes('3')) {
-      robotTalk = "Won't you be my neighbor??";
-    } else if (currentNumber.includes('1')) {
-      robotTalk = "Beep!";
     } else if (currentNumber.includes('2')) {
       robotTalk = "Boop!";
-    } else if (currentNumber.includes('3')) {
-      robotTalk = "Won't you be my neighbor?";
-    }
-    else {
+    } else if (currentNumber.includes('1')) {
+      robotTalk = "Beep!";
+    } else {
       robotTalk = i;
     }
     robotArray.push(robotTalk);
   }
   return robotArray.join(' ');
 }
+
 window.onload = function () {
   let form = document.querySelector("form");
   form.onsubmit = function (event) {
